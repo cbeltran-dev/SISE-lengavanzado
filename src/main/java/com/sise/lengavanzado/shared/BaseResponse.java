@@ -26,6 +26,8 @@ public class BaseResponse {
     public static BaseResponse error(String message){
         return new BaseResponse(message,true, null);
     }
-
+    public static BaseResponse errorNotFound(){
+        return new BaseResponse("Recurso no encontrado",true,null);
+    }
 
 }
