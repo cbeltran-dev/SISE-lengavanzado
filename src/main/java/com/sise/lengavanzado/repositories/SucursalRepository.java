@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import com.sise.lengavanzado.entities.Sucursal;
 
 import jakarta.transaction.Transactional;
+import java.util.List;
+
 
 @Repository
 public interface SucursalRepository extends JpaRepository<Sucursal,Integer> {
@@ -14,4 +16,7 @@ public interface SucursalRepository extends JpaRepository<Sucursal,Integer> {
     @Transactional
     @Query("UPDATE Sucursal s SET s.estadoAuditoria = '0' WHERE s.idSucursal = :id")
     void darBajaSucursal(@Param("id") Integer id);
+
+    List<Sucursal> findByEstadoAuditoria(String estadoAuditoria);
+    Sucursal findOneByIdSucursalAndEstadoAuditoria(Integer idSucursal, String estadoAuditoria);
 }
