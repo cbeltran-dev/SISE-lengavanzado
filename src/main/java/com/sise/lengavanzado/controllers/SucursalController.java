@@ -19,10 +19,8 @@ import com.sise.lengavanzado.pyload.requests.SucursalRequestInsert;
 import com.sise.lengavanzado.pyload.requests.SucursalRequestUpdate;
 import com.sise.lengavanzado.services.SucursalService;
 import com.sise.lengavanzado.shared.BaseResponse;
-import com.sise.lengavanzado.utils.MappedUtil;
 import com.sise.lengavanzado.utils.ValidationUtil;
 import jakarta.validation.Valid;
-
 
 @RestController
 @RequestMapping("/sucursales")

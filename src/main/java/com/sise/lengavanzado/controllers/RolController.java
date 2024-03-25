@@ -12,14 +12,12 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.sise.lengavanzado.adapters.RolAdapter;
 import com.sise.lengavanzado.entities.Rol;
 import com.sise.lengavanzado.pyload.requests.RolRequestInsert;
 import com.sise.lengavanzado.pyload.requests.RolRequestUpdate;
 import com.sise.lengavanzado.services.RolService;
 import com.sise.lengavanzado.shared.BaseResponse;
-import com.sise.lengavanzado.utils.MappedUtil;
 
 @RestController
 @RequestMapping("/rol")
