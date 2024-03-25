@@ -1,6 +1,5 @@
 package com.sise.lengavanzado.entities;
 import com.sise.lengavanzado.shared.BaseEntity;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

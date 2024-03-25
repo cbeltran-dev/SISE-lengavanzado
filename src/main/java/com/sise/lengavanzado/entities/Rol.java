@@ -1,15 +1,28 @@
 package com.sise.lengavanzado.entities;
-import java.sql.Date;
+import com.sise.lengavanzado.shared.BaseEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 @Data
-public class Rol {
+@EqualsAndHashCode(callSuper = false)
+@Entity
+@Table(name = "roles")
+public class Rol extends BaseEntity {
+
+    @Id
+    @Column(name = "id_rol")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idRol;
-    private String nombrel;
+
+    @Column(name = "nombre")
+    private String nombre;
+
+    @Column(name = "descripcion")
     private String descripcion;
-    private String estadoAuditoria;
-    private String usuarioCreacion;
-    private Date fechaCreacion;
-    private String usuarioModificacion;
-    private Date fechaModificacion;
 }
